@@ -1,0 +1,107 @@
+<style>
+
+/*Esta view herda estilos da view arvore*/
+
+.arvore_parentes_wrapper{
+	height: 64%;
+}
+
+#pais_fotos{
+	width: 100%;
+	height: 62%;
+}
+
+#pais_mae,#foto_mae{
+	float:right;
+	margin-top: 5%;	
+	margin-right:10.5%;
+}
+
+
+#pais_pai,#foto_pai{
+	float:left;
+	margin-top: 5%;
+	margin-left: 10.5%;
+}
+
+#foto_mae,#foto_pai{
+	margin-top: 2.5%;
+	height: 88%;
+	width: 19.7%;
+	display:block;
+	background-color: white;	
+}
+
+#foto_mae{
+	margin-right:28%;
+}
+
+#foto_pai{
+	margin-left:28%;
+}
+
+#pais_parents_wrapper{
+	padding-top: 0.2%;
+    height:42%;
+}
+
+
+#pais_pai:only-child, #pais_mae:only-child,#foto_pai:only-child, #foto_mae:only-child {
+	float:none;
+	margin: 5% auto;
+	margin-bottom: 0px;
+}
+
+#foto_pai:only-child, #foto_mae:only-child{
+	margin: 1.1% auto;
+}
+
+
+#parents_error{
+	font-size: 1.5em;
+	background-color: rgba(255,108,108,0.8);
+	width: 80%;
+	position: relative;
+	top:10%;
+	margin: 0 auto;
+	height:auto;
+    border-radius: 1.5em;
+    display: flex;
+    color:white;
+    padding:2%;
+}
+
+</style>
+
+<div id="pais_parents_wrapper">
+
+	<div class="arvore_parentes_wrapper" id="pais_mae" ng-if="relatives[1] || !relatives[0]">
+		<figure class="background-center arvore_folha"></figure>
+		<div class="arvore_parentes_box">
+			<h2>Mãe</h2>
+			<div class="arvore_name_wrapper">
+				<h3>{{relatives[1].name}}</h3>	
+			</div>	
+		</div>
+	</div>
+	
+	<div class="arvore_parentes_wrapper" id="pais_pai" ng-if="relatives[0] || !relatives[1]">
+		<figure class="background-center arvore_folha"></figure>
+		<div class="arvore_parentes_box">
+			<h2>Pai</h2>
+			<div class="arvore_name_wrapper">
+				<h3>{{relatives[0].name}}</h3>	
+			</div>	
+		</div>
+	</div>	
+</div>
+
+<div id="pais_fotos">
+	<figure id="foto_mae" class="background-center" style="background-image: url({{relatives[1].url_photo}});"
+	 ng-if="relatives[1]"></figure>
+	<figure id="foto_pai" class="background-center" style="background-image: url({{relatives[0].url_photo}});" 
+	ng-if="relatives[0]"></figure>
+	<div ng-if="!relatives[0] && !relatives[1] && loaded_relatives" class="parents_error">
+		<div>Cadastre informações no aplicativo sobre a árvore genealógica para obter acesso a esta página!</div>
+	</div>
+</div>

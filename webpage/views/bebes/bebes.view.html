@@ -1,0 +1,229 @@
+<style>
+/*wrapper-bebes*/
+#wrapper-bebes{
+	display: table;
+	margin: 0 auto;
+	min-width: 50%;
+	width: auto;
+	max-width: 98%;
+	min-height: 100vh;
+	height: auto;
+	padding:5px;
+	background-image: url(imgs/meia-joana.png); 
+    background-position: bottom right;
+    background-size: 20%;
+}
+
+@media screen and (min-width: 1000px){
+	#wrapper-bebes{
+		width: 1000px;
+	}
+}
+/*bebes-logo*/
+#bebes-logo{
+    height: 200px;
+    margin:0;
+    padding-top: 0;
+    width: 100%;
+    background-image: url(imgs/logo_menor.png);
+    background-position: bottom center;
+    background-size: 13em;
+    background-position-x:30%;
+}
+
+#bebes-nav{
+	width: 120px;
+	height: 67%;
+    background-image: url(imgs/bg-menu.png); 
+    display:block;
+    float:right;
+    margin-right: 4%;
+    margin-top: 0;
+}
+
+#bebes-nav a{
+	color:white;
+	text-decoration: none;
+	position: relative;
+	top:50%;
+	display: block;
+	margin:0 auto;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+/*bebes-ola*/
+#bebes-ola{
+    height: 63px;
+    margin:20px 0;
+    width: 180px;
+    background-image: url(imgs/bg-nome.png); 
+    padding: 0;
+    background-position: center left;
+}
+
+#bebes-ola h3{
+	color:white;
+	font-size: 1.3em;
+	margin-left: 12%;
+	position: relative;
+	top:30%;
+	overflow: auto;
+}
+
+/*bebes-texto*/
+#bebes-texto{
+    height: auto;
+    margin:0;
+    width: 100%;
+}
+
+#bebes-texto p{
+	margin:0;
+	color:#714319;
+	font-family:Trebuchet;
+	font-weight:bold;
+	font-size: 20px;
+}
+
+/* seletor */
+#seletor{
+    min-height: 38vh;
+    height: auto;
+    margin:0;
+    width: 100%;
+    background-size:20%;
+    margin-bottom: 15%;
+}
+
+/* babies_error */
+.babies_error{
+	background-color: rgba(255,108,108,0.8);
+	width: 80%;
+	position: relative;
+	margin: 0 auto;
+	top:100px;
+	height:auto;
+	border-radius: 1.5em;
+	display: flex;
+	color:white;
+	padding:2%;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px){
+	.babies_error{
+		font-size: 0.8em;
+		margin: 0 auto;
+		top:20px;
+		color:white;
+		padding:2%;
+	}
+}
+
+.babies_error h3{
+	text-align: center;
+	font-size: 22px;
+	margin:10px auto;
+}
+
+/* baby_selector wrapper*/
+.baby_selector{
+	height: 135px;
+	width: 380px;
+	display: block;
+	float: left;
+	background-image: url(imgs/fundo-teste.png);
+	margin:3% 4.2%; 
+}
+
+@media screen and (max-width: 918px){
+	.baby_selector{
+		float:none;
+		margin:3% auto; 
+	}
+
+}
+
+.baby_selector_link{
+	height: inherit;
+	width: inherit;
+	color:white;
+	text-decoration: none;
+}
+
+.baby_picture{
+	display:block;
+	float:left;	
+	background-image: url(imgs/bebe_joaninha.png);
+	height: 80%;
+	width:25%; 
+	margin:8px 22px;
+}
+
+.baby_dados{
+	display:block;
+	float:right;
+	height: 98%;
+	width:50%; 
+	padding: 0;
+	margin-right: 48px;
+}
+
+.baby_dados_name{
+	margin-top:26px;
+	padding: 0;
+	width:70%;
+	overflow: auto;
+}
+
+.baby_dados_age{
+	margin-top:30px;
+	width:70%;
+}
+	
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes" />
+</head>
+
+<div id="wrapper-bebes" class="background-center">
+
+	<div id="bebes-logo" class="background-center">
+		<nav id="bebes-nav" class="background-center">
+                <a ui-sref="public.login" id="nav-sair"> 
+                    <h3>
+                        Sair
+                    </h3>
+                </a>			
+		</nav>
+	</div>
+
+	<div id="bebes-ola" class="background-center">
+		<h3>Olá {{name}}</h3>
+	</div>
+
+	<section id="bebes-texto">
+		<p>Esse espaço foi criado para que você tenha algumas das informações mais legais do seu aplicativo disponíveis no computador. E mais: após estar com tudo preenchido, poderá salvar o arquivo para leva-lo na gráfica de sua preferência e imprimir. Assim o seu lindo livro do bebê poderá ficar pra sempre na estante, como a deliciosa recordação que esse momento merece. </p>
+		<p>Obs. as informações só podem ser editadas no aplicativo.</p>
+	</section>
+
+
+	<div id="seletor">
+		<div ng-if="!babies.length && loaded_babies" class="babies_error">
+			<h3>Você ainda não tem nenhum bebê cadastrado! <br/>
+			Acesse o aplicativo e cadastre seu bebê para obter acesso ao álbum!</h3>
+		</div>
+		<div class="baby_selector background-center" 
+		ng-repeat="baby in babies | orderBy:'updated_at':true" ng-click="selectBaby(baby)">
+			<a href ="" class="baby_selector_link">
+				<figure class="background-center baby_picture"></figure>
+				<div class="baby_dados">
+					<h4 class="baby_dados_name">{{baby.name}}</h4>
+					<h4 class="baby_dados_age">{{baby.age+' '+baby.age_metric}}</h4>
+				<div>
+			</a>
+		</div>
+	</div>
+</div>

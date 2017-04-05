@@ -1,0 +1,41 @@
+<style>
+
+/*Esta view herda estilos da view arvore*/
+
+.arvore_parentes_wrapper{
+	height: 72px;
+	margin:2.6%;
+	margin-top: 10.5%;
+}
+
+@media print{
+	.arvore_parentes_wrapper{
+		height: 12vh;
+	}		
+}
+	
+#arvore_top_folha{
+	background-image: url(imgs/ico_outros.png); 
+	height: 9.8%;
+	width: 7.5%;
+}
+
+.float-left{
+	float:left;
+}
+
+</style>
+
+<div class="arvore_parentes_wrapper float-left" ng-repeat="parent in parents | orderBy:'-parent.id' | limitTo : 6 : begin">
+	<figure class="background-center arvore_folha"></figure>
+	<div class="arvore_parentes_box">
+		<h2>{{parent.type_name}}</h2>
+		<div class="arvore_name_wrapper">
+			<h3>{{parent.name}}</h3>	
+		</div>	
+	</div>
+</div>
+
+<div ng-if="!parents.length && loaded_parents" class="parents_error">
+	<div>Cadastre informações no aplicativo sobre a árvore genealógica para obter acesso a esta página!</div>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" ng-app = "app">
+<head>
+	<meta  http-equiv="Content-Type"  charset="utf8" />
+	<title>Seja bem-vindo | Joaninha - O aplicativo da mãe moderna</title>
+    <base href="site/webpage/" target="_blank"><!--[if IE 6]></base><![endif]-->	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- fake favicon -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+    
+    <meta name="description" content="O aplicativo mais completo e organizado
+    para você e seu bebê, nessa nova e maravilhosa fase"/>
+    <meta name="ABSTRACT" content="O aplicativo mais completo e organizado
+    para você e seu bebê, nessa nova e maravilhosa fase"/>
+    <meta property="og:title" content="O aplicativo mais completo e organizado
+    para você e seu bebê, nessa nova e maravilhosa fase"/>
+	<meta property="og:image" content="imgs/logo.png"/>
+	<meta property="og:description" content="O aplicativo mais completo e organizado
+    para você e seu bebê, nessa nova e maravilhosa fase"/>
+	<meta name="keywords" content="O aplicativo mais completo e organizado
+    para você e seu bebê, nessa nova e maravilhosa fase"/>
+    <meta name="geo.placename" content="Brasil"/>
+    <meta name="geo.region" content="br"/>
+    <meta name="author" content="Joaninha"/>
+    <meta name="DC.title" content="Joaninha"/>
+</head>
+
+<body>
+
+   <div id="main-div" ui-view></div>
+
+ 	<!-- Angular.js Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+
+	<!-- MD5 Hash Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/md5-min.js"></script>
+
+	<!-- Application Scripts -->
+	<script src="app.js" charset="utf-8"></script>
+	<script src="services/printer.service.js"></script>
+	<script src="services/authentication.service.js"></script>
+	<script src="factories/httprequestinterceptor.factory.js"></script>
+	<script src="views/public/login/login.controller.js"></script>
+	<script src="views/bebes/bebes.controller.js"></script>
+	<script src="views/app/app.controller.js"></script>
+	<script src="views/app/capa/capa.controller.js"></script>
+	<script src="views/app/voce/voce.controller.js"></script>
+	<script src="views/app/arvore/pais/pais.controller.js"></script>
+	<script src="views/app/arvore/familia/familia.controller.js"></script>
+	<script src="views/app/gravidez/gravidez.controller.js"></script>
+	
+</body>
+
+</html>

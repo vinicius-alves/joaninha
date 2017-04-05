@@ -1,0 +1,261 @@
+<style>
+
+/*wrapper-login*/
+#wrapper-login{
+        height: 730px;
+        padding:0px;
+        z-index: 1;
+	}
+
+@media screen and (max-height: 730px) and (min-width: 600px) {
+
+	#wrapper-login{
+		position:relative;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	#wrapper-login{
+		margin-top: 20px;
+        width: 600px;
+        height: 1050px;
+	}
+}
+
+@media screen  and (min-width: 600px){
+
+	#wrapper-login{
+        width: 690px;
+	}
+}
+
+@media screen  and (min-width: 880px){
+		
+	#wrapper-login{
+        padding-right: 210px;
+	}
+}
+
+/*nuvem-wrapper*/
+#nuvem-wrapper{
+	z-index: 0;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	height:58.5%;
+	padding:0;
+	margin:0;
+}
+
+@media screen and (max-height: 730px) and (min-width: 600px) {
+	#nuvem-wrapper{
+		height: 427px;
+		position: relative;
+		margin-top:-427px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#nuvem-wrapper{
+		position:relative;
+		min-height:760px;
+		margin-top:320px;
+		width: 600px;
+	}
+}
+
+/*background-white*/
+#background-white{
+	background-color: white;
+	bottom:0;
+	width: 100%;
+	height:calc(100% - 101px);
+	padding:0;
+	margin:0;
+}
+
+@media screen and (max-height: 730px)  and (min-width: 600px){
+	#background-white{
+		height: 326px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#background-white{
+		min-height: 41em;
+	}
+}
+
+/*nuvem-picute*/
+#nuvem-picute{
+	height: 101px;
+	width: 100%;
+	background-repeat: repeat-x;
+	background-image: url(imgs/nuvem.png);
+	padding:0;
+	margin:0;
+}
+
+@media screen and (max-width: 960px) {
+	#nuvem-picute{
+		background-size: cover;
+	}
+}
+
+/*play-logo-wrapper*/
+
+#play-logo-wrapper{
+		width: 210px;
+		height: 730px;
+		display:block;
+		margin:0px;
+}
+
+@media screen and (max-width: 600px) {
+
+	#play-logo-wrapper{
+		width:100%;
+		position: absolute;
+  		right: 0; bottom: 0;
+  		left: 0;
+  		height: 300px;	
+  	}
+}
+
+@media screen  and (min-width: 600px){
+
+	#play-logo-wrapper{
+		float:left;
+	}
+}
+
+
+#play-logo-wrapper a{
+	text-decoration: none;
+	color: white;
+}
+
+#play-logo{
+	background-image: url(imgs/googleplay.png); 
+	height:200px;
+	width: 100%;
+}
+
+#play-logo h5{
+	height: 100px;
+	position: relative;
+	top: 40px;
+}
+
+/*form-login*/
+
+#form-login{
+        width: 460px;
+        height: 730px;
+        display:block;
+        margin:0px;
+
+	}
+
+@media screen and (max-width: 600px) {
+
+	#form-login{
+        width:100%;
+	}
+}
+
+@media screen  and (min-width: 600px){
+
+	#form-login{
+        float:right;
+
+	}
+}	
+
+/*app-logo*/
+
+#app-logo{
+	background-image: url(imgs/logo.png); 
+    margin-bottom: 110px;
+    padding:0;
+    width: 80%;
+    height: 300px;
+}
+
+/*Style for child views !important*/
+
+.input-field, .submit-field{
+	border-style: none;
+	padding:4px;
+	height: 38px;
+}
+
+.input-field, .error-field{
+	color:white;
+	font-size: 13pt;
+}
+
+.input-field{
+
+	background-color: rgb(226,211,232);
+	padding-left: 18px;
+	width: 400px;
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+
+.submit-field{
+	background-color: rgb(202,176,213);
+	width: 40px;
+}
+
+.error-field{
+	background-color: rgba(255,108,108,0.8);
+	width: 360px;
+	margin:auto;
+	height:38px;
+    border-radius: 15px;
+    display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 11px;
+	margin-top: 11px;
+	
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid rgb(95,57,20);
+  margin:auto;
+}
+
+</style>
+
+<head>
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes" />
+</head>
+
+<div id="wrapper-login" class="center">
+
+ 	<div id="play-logo-wrapper">
+ 		<a href="https://play.google.com/store/apps/details?id=hbsoft.com.br.joaninha&hl=pt_BR" target="_blank">
+ 			<figure id="play-logo" class="background-center">
+ 				<h5>Ainda não possui<br/> nosso aplicativo? <br/> Faça agora o download! </h5>
+ 			</figure>
+ 		</a>	
+ 	</div>
+	<div id="form-login">
+		<figure id="app-logo" class="background-center"></figure>
+		<div ui-view></div>
+	</div>
+</div>
+
+<div id="nuvem-wrapper">
+	<figure  id="nuvem-picute" class="background-center"></figure>
+	<div id="background-white"></div>
+</div>
+

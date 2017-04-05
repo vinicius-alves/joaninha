@@ -1,0 +1,34 @@
+<style>
+
+#capa{
+	height: 100%;
+	width: 100%;
+	margin:0;
+	padding: 0;
+	background-image: url(imgs/capa.png); 
+	background-size: cover;                  
+}
+
+#nome-bebe {
+	color: #adafb1;
+	position: relative;
+	top:51%;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 19px;
+}
+
+@media print{
+	#nome-bebe{
+		font-size:2.7vh;
+	}
+}
+
+</style>
+
+<figure id="capa" class="background-center">
+	
+	<div id="nome-bebe">{{baby_name}}</div>
+
+</figure>

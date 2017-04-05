@@ -1,0 +1,130 @@
+<style>
+
+#arvore_icone,#arvore_section{
+	width: 100%;
+}
+
+#arvore_icone{	
+	background-image: url(imgs/icon_arvore.png); 
+	height: 19%;
+	margin: 3vh auto;
+}
+
+#arvore_section{
+	height: 59%;
+	width: 95%;
+	margin-top: 0;
+	margin-bottom: 3%;
+	margin-left: 5%;
+	margin-right: 3%;
+}
+
+#arvore_titulo{
+	font-size: 40px;
+	color:rgb(99,99,99);
+	margin:0;
+	text-align: center;
+}
+
+@media print{
+	#arvore_titulo{
+		font-size: 6vh;
+	}
+}
+
+#arvore_top_folha{
+	margin:0;
+	float:right;
+	background-image: none; 
+}
+
+/*Style for child views !important*/
+.arvore_parentes_wrapper{
+	position: relative;
+	width: 27.8%;
+	display:block;
+}
+
+.arvore_parentes_box{
+	background-color: white;
+	text-align: left;
+	height: inherit;
+	padding: 9.5%; 
+}
+
+.arvore_parentes_box h2{
+	color:rgb(61,160,131);
+	margin-top: -7%;
+	margin-bottom: 0;
+}
+
+.arvore_name_wrapper{
+	width: inherit;
+	height: 85%;
+	overflow: auto;
+}
+
+.arvore_parentes_box h3{
+	margin:0;
+	margin-top: 2%;
+	color:rgb(99,99,99);		
+}
+
+@media print{
+
+	.arvore_parentes_box h2{
+		font-size: 4vh;
+	}
+
+	.arvore_parentes_box h3{
+		font-size: 3vh;		
+	}
+}
+
+.arvore_folha{
+	background-image: url(imgs/ico_outros.png); 
+	height: 60px;
+	width: 30%;
+	margin: 0;
+	position: relative;
+	display:block;
+	float:left;
+	margin-top: -10%;
+	margin-left: -12%;
+}
+
+@media print{
+	.arvore_folha{ 
+		height: 11vh;
+	}
+}
+
+.parents_error{
+	font-size: 1.5em;
+	background-color: rgba(255,108,108,0.8);
+	width: 80%;
+	position: relative;
+	top:10%;
+	margin: 0 auto;
+	height:auto;
+	border-radius: 1.5em;
+	display: flex;
+	color:white;
+	padding:2%;
+}
+
+@media print{
+	.parents_error{
+		font-size: 4vh;
+	}
+}
+
+</style>
+
+<figure class="background-center arvore_folha" id="arvore_top_folha"></figure>
+
+<figure id="arvore_icone" class="background-center"></figure>
+
+<h1 id="arvore_titulo">Árvore Genealógica</h1>
+
+<section id="arvore_section" ui-view></section>

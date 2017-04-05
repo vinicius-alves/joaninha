@@ -1,0 +1,65 @@
+<style>
+
+/*Esta view herda estilos da view public*/
+
+.input-arrow-wrapper{
+	position:relative;
+
+}
+
+.input-arrow{
+	position:absolute;
+	margin:0;
+	padding:0;
+	top:17%; 
+	right:5%;
+}
+
+@media screen and (max-width: 600px) {
+	.input-arrow{
+		right:15.7%;
+	}
+}
+
+#loading-div{
+	width: 16px;
+	height: 16px;
+}
+
+#fb-login{
+	background-image: url(imgs/login-facebook.jpg); 
+	height: 70px;
+	width: 80%;
+	margin-top: 30px;
+}
+
+</style>
+
+<form name="form" ng-submit="form.$valid && login()" novalidate>
+
+	<input type="email" id="email" name="email" class="input-field" ng-model="email" placeholder="Login" required />
+	<div ng-messages="form.$submitted && form.email.$error">
+	    <div ng-message="required">O e-mail é requerido</div>
+	</div>
+	<div class="input-arrow-wrapper">
+		<input type="password" id="password" name="password" class="input-field" ng-model="password" placeholder="Password" required >
+
+		<button  ng-disabled="loading" type="submit" class="submit-field input-arrow"  value="">
+			<div ng-if="!loading" class="arrow-right"></div>
+			<div ng-if="loading" id="loading-div" class="loader"></div>
+		</button>
+	</div>
+	<div ng-messages="form.$submitted && form.password.$error">
+		<div ng-message="required">A senha é requerida</div>
+	</div>
+
+	<div ng-if="error" class="error-field">
+
+		<span>{{error}}</span>
+	</div>
+
+	<a href="/#!" ng-click="login_fb()">
+		<figure id="fb-login" class="background-center"></figure>
+	</a>
+				
+</form>

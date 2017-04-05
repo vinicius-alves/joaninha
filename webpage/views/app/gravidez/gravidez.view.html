@@ -1,0 +1,83 @@
+<style>
+	#gravidez-sections-wrapper{
+		margin-top: 12%;
+		width: 68%;
+		text-align: left;
+		display:block;
+		float:left;
+	}
+
+	.gravidez-section{
+		margin-left: 4%;
+	}
+
+	.gravidez-subtitle{
+		color:rgb(95,57,20);
+		margin-bottom: 1%;
+	}
+
+	@media print{
+		.gravidez-subtitle{
+			font-size: 3vh;
+		}	
+	}
+
+	.gravidez-text-wrapper{
+		background-color: rgb(252,251,223);
+        padding: 3.1%;
+        max-height: 90px;
+        overflow-y:auto;
+	}
+
+	@media print{
+		.gravidez-text-wrapper{
+			max-height: 14vh;
+		}
+	}
+
+	.gravidez-text{
+		margin:0;
+		font-size: 1em;
+	}
+
+	@media print{
+		.gravidez-text{
+			font-size:2.5vh;
+		}
+	}
+
+	#gravidez-image{
+        width: 25%;
+		height:98%;
+		display:block;
+		float:right;
+		position:relative;
+		background-image: url(imgs/aba_gravidez.png); 
+	}
+
+</style>
+
+<div id="gravidez-sections-wrapper">
+	<section class="gravidez-section">
+		<h3 class="gravidez-subtitle">Quando descobrimos a gravidez...</h3>
+		<div class="gravidez-text-wrapper">
+			<p class="gravidez-text">{{discoveryReactions}}</p>
+		</div>
+	</section>
+
+	<section class="gravidez-section">
+		<h3 class="gravidez-subtitle">Estavam lá:</h3>
+		<div class="gravidez-text-wrapper">
+			<p class="gravidez-text">{{discoveryPeopleAround}}</p>
+		</div>
+	</section>
+
+	<section class="gravidez-section">
+		<h3 class="gravidez-subtitle">E as reações foram:</h3>
+		<div class="gravidez-text-wrapper">
+			<p class="gravidez-text">{{discoveryHowItWas}}</p>
+		</div>
+	</section>
+</div>
+
+<figure id="gravidez-image" class="background-center"></figure>

@@ -1,0 +1,53 @@
+@charset "utf8";
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-image: url(../imgs/fundo.gif); 
+  background-repeat:repeat;
+}
+
+@media print {
+   * {
+      -webkit-print-color-adjust: exact;
+   }
+}
+
+#main-div{
+	height: 100%;
+	width: 100%;
+  display: table;
+}
+
+.center{
+	  display:block;
+  	text-align: center;
+  	position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		margin: auto;
+}
+
+.loader {
+    border: 8px solid rgb(187,120,197);
+    border-top: 8px solid rgb(95,57,20); 
+	  border-left: 8px solid rgb(95,57,20);   
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.background-center{
+    background-size: contain;                     
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin:0 auto;
+    position: relative;
+}

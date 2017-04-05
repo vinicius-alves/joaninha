@@ -1,0 +1,81 @@
+<style>
+
+#primeiro_coracao, #voce_section, #segundo_coracao{
+    margin:0;
+	display: block;
+	height: 98%;
+	width: 35%;
+	position: relative;
+}
+
+#primeiro_coracao, #voce_section{
+	float:left;
+}
+
+#primeiro_coracao,#segundo_coracao{
+	width:31.2%;
+}
+
+#segundo_coracao{
+	float:right;
+}
+
+#primeiro_coracao figure, #segundo_coracao figure{
+	width:32%;
+	height: 13%;
+	background-image: url(imgs/ico_marido.png); 
+}
+
+#primeiro_coracao figure{
+	top:17%;
+}
+#segundo_coracao figure{
+	top:55%;
+}
+
+#voce_section h1{
+	font-size: 50px;
+	color:rgb(99,99,99);
+	margin:0;
+	text-align: center;
+}
+
+@media print{
+	#voce_section h1{
+		font-size: 6vh;
+	}
+}
+
+#bebe_joaninha{
+	margin-top: 8%;
+	margin-bottom: 5%;
+	width:43%;
+	height: 20%;
+	background-image: url(imgs/bebe_joaninha.png);
+}
+
+#voce_picture{
+	margin: 7% auto;
+	width:85%;
+	height: 60%;
+	background-color: white;
+	background-image: url(imgs/bebe_joaninha.png);
+}
+	
+</style>
+
+<div id="primeiro_coracao">
+	<figure class="background-center"></figure>
+</div>
+<section id="voce_section">
+	<figure id="bebe_joaninha" class="background-center"></figure>
+
+	<h1>Você</h1>
+
+	<figure id="voce_picture" style="background-image: url({{url_photo}});"
+	 class="background-center"></figure>
+	
+</section>
+<div id="segundo_coracao">
+	<figure class="background-center"></figure>
+</div>
