@@ -96,7 +96,43 @@ app.config(function ($stateProvider) {
         parent:'app',
         url: '/gravidez',
         templateUrl: 'views/app/gravidez/gravidez.view.html',
-        controller: 'Gravidez.Controller'
+        abstract:true
+     })
+    .state('app.gravidez.descoberta', {
+        parent:'app.gravidez',
+        url: '/descoberta',
+        templateUrl: 'views/app/gravidez/descoberta/descoberta.view.html',
+        controller: 'Descoberta.Controller'
+     })
+    .state('app.gravidez.mamae', {
+        parent:'app.gravidez',
+        url: '/mamae',
+        templateUrl: 'views/app/gravidez/mamae/mamae.view.html',
+        controller: 'Mamae.Controller'
+     })
+    .state('app.gravidez.chegada', {
+        parent:'app.gravidez',
+        url: '/chegada',
+        templateUrl: 'views/app/gravidez/chegada/chegada.view.html',
+        controller: 'Chegada.Controller'
+     })
+    .state('app.gravidez.cantinho', {
+        parent:'app.gravidez',
+        url: '/cantinho',
+        templateUrl: 'views/app/gravidez/cantinho/cantinho.view.html',
+        controller: 'Cantinho.Controller'
+     })
+    .state('app.gravidez.chadebebe', {
+        parent:'app.gravidez',
+        url: '/chadebebe',
+        templateUrl: 'views/app/gravidez/chadebebe/chadebebe.view.html',
+        controller: 'Chadebebe.Controller'
+     })
+    .state('app.gravidez.chadefralda', {
+        parent:'app.gravidez',
+        url: '/chadefralda',
+        templateUrl: 'views/app/gravidez/chadefralda/chadefralda.view.html',
+        controller: 'Chadefralda.Controller'
      });
 });
 

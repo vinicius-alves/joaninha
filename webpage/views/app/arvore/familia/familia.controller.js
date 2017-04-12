@@ -57,7 +57,7 @@ function Controller($rootScope,$scope,$http,$localStorage, apiVersao){
 				$scope.set_right_callback(call_right);
 			} else{
 				$rootScope.global_anterior = "app/arvore/pais";
-				$rootScope.global_proxima = "app/gravidez";
+				$rootScope.global_proxima = "app/gravidez/descoberta";
 			}
  	};
  	
@@ -96,7 +96,7 @@ function Controller($rootScope,$scope,$http,$localStorage, apiVersao){
  			alert("Verifique sua conexão com a internet");
  		}
  		$rootScope.global_anterior = "app/arvore/pais";
-		$rootScope.global_proxima = "app/gravidez";
+		$rootScope.global_proxima = "app/gravidez/descoberta";
  	});
 
  	/**
@@ -153,7 +153,7 @@ function Controller($rootScope,$scope,$http,$localStorage, apiVersao){
 				$scope.set_right_callback(function(){});
 			});
 			$localStorage.arvore[baby_id].begin = $scope.begin;
-			$rootScope.global_proxima = "app/gravidez";
+			$rootScope.global_proxima = "app/gravidez/descoberta";
 		}
 	}; 	
 
