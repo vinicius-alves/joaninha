@@ -1,0 +1,21 @@
+<style>
+
+
+
+.modal-picture{
+	width: 97px;
+	height: 97px;
+	display: block;
+	float:right;
+	margin:3px;
+	padding: 0;
+	background-size: cover; 
+}
+	
+</style>
+
+
+<figure class="background-center modal-picture" ng-repeat="picture in pictures"
+ ng-click="console.log('ok');" style="background-image: url({{picture}});"></figure>
+
+<div style="clear: both"></div>

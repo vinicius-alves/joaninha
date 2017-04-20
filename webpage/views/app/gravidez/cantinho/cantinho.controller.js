@@ -12,10 +12,25 @@ angular.module('app')
 * Controller da view "app.gravidez.cantinho".<br/> 
 */
 
-function Controller($scope,$rootScope,$http,$localStorage,apiVersao){
-	$rootScope.global_anterior = "app/gravidez/descoberta";
-	$rootScope.global_proxima = "";
+function Controller($scope,$rootScope,$http,$localStorage,apiVersao,ngDialog){
+	$rootScope.global_anterior = "app/gravidez/chegada";
+	$rootScope.global_proxima = "app/gravidez/chadebebe";
 	var baby_id = $localStorage.baby.id;
 	var params ={baby_id : baby_id};
+
+	$scope.pictures = ["http://i.imgur.com/SqBNDlm.jpg","http://i.imgur.com/ZOCXcDJ.jpg",
+	"http://i.imgur.com/VunDFZH.jpg","http://i.imgur.com/AyNquWT.jpg"];
+	
+
+
+	$scope.openModal = function(ev) {
+		ngDialog.open({
+	    template: 'views/app/gravidez/modal/modal.view.html',
+	    controller: 'Modal.Controller',
+	    scope: $scope
+	});
+			
+
+	};
 
 };

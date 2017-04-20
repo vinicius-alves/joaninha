@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('app', ['ui.router','ngMessages','ngStorage']);
+var app = angular.module('app', ['ui.router','ngMessages','ngStorage','ngDialog']);
 
 /**
 * @ngdoc object
@@ -30,8 +30,8 @@ var app = angular.module('app', ['ui.router','ngMessages','ngStorage']);
 * para todas as urls relativas, também de fácil alteração.
 */
 
-app.constant("apiVersao", "/joaninhapi/0.1");
-app.constant("prefix", "/#!/");
+app.constant("apiVersao", "/joaninha/joaninhapi/0.1");
+app.constant("prefix", "/joaninha/#!/");
 
 //public routes
 app.config(function ($stateProvider) {

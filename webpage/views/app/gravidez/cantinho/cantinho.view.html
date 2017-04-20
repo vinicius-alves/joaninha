@@ -1,13 +1,34 @@
 <style>
 
-.decoberta-mae{
-	height: 60%;
+.cantinho-wrapper{
+	height: 100%;
+	width: 100%;
 }
 
-.descoberta-mae-foto{
-	width: 50%;
-	height: 80%;
+#cantinho-pictures-container{
+	height: 70%;
+	margin-top:10%;
+}
+
+.cantinho-big-picture,.cantinho-picture{
+
 	background-color: white;
+	display: block;
+	float:left;
+}
+
+.cantinho-big-picture{
+	margin-left: 0;
+	width: 65%;
+	height: 72%;
+
+}
+
+.cantinho-picture{
+	margin: 1%;
+	width: 30%;
+	height: 30%;
+
 }
 
 </style>
@@ -16,16 +37,16 @@
 
 <div class="gravidez-sections-wrapper">
 	
-	<section class="descoberta-mae gravidez-section">
-		<h3 class="gravidez-subtitle">Essa era a mamãe gávida</h3>
-		<figure class="background-center descoberta-mae-foto"></figure> 
-	</section>
-
-	<section class="gravidez-section">
-		<h3 class="gravidez-subtitle">E ficava muito enjoada com</h3>
-		<div class="gravidez-text-wrapper">
-			<p class="gravidez-text">text</p>
+	<section class="gravidez-section cantinho-wrapper">
+		<h3 class="gravidez-subtitle">E esse foi o cantinho que preparamos 
+		</br> para você, com todo carinho</h3>
+		<div id="cantinho-pictures-container">
+			<figure class="background-center cantinho-big-picture" ng-click="openModal($event)"></figure>
+			<figure class="background-center cantinho-picture" ng-click="openModal($event)"></figure> 
+			<figure class="background-center cantinho-picture" ng-click="openModal($event)"></figure>
 		</div>
+
+		
 	</section>
 
 

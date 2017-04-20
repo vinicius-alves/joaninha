@@ -13,8 +13,8 @@ angular.module('app')
 */
 
 function Controller($scope,$rootScope,$http,$localStorage,apiVersao){
-	$rootScope.global_anterior = "app/arvore/familia";
-	$rootScope.global_proxima = "";
+	$rootScope.global_anterior = "app/gravidez/descoberta";
+	$rootScope.global_proxima = "app/gravidez/chegada";
 	var baby_id = $localStorage.baby.id;
 	var params ={baby_id : baby_id};
 
