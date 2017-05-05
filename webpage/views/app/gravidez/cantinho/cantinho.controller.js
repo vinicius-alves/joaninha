@@ -25,7 +25,7 @@ function Controller($scope,$rootScope,$http,$localStorage,apiVersao,ngDialog){
 
 	$scope.openModal = function(ev) {
 		ngDialog.open({
-	    template: 'views/app/gravidez/modal/modal.view.html',
+	    template: 'views/app/modal/modal.view.html',
 	    controller: 'Modal.Controller',
 	    scope: $scope
 	});

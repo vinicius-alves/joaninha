@@ -15,4 +15,8 @@ angular.module('app')
 function Controller($scope){
 	//console.log("scopo parent: ",$scope.$parent.pictures);
 
+	$scope.select = function(picture){
+		console.log(picture);
+	};
+
 };
